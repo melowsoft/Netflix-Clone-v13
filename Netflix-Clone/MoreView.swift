@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MoreView.swift
 //  Netflix-Clone
 //
 //  Created by User on 16/08/2020.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MoreView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("More View")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MoreView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MoreView()
     }
 }
