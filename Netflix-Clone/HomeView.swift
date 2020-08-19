@@ -12,24 +12,30 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
+          
+            
+            
             ScrollView {
                 HeaderView()
                 .padding()
                 .zIndex(1000)
-                .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.6), Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))]), startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.8), Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))]), startPoint: .top, endPoint: .bottom))
                
                 
                 VStack {
                     ZStack {
-                        Image("umbrella")
+                        Image("suits")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: screen.width)
                             .frame(height: screen.height * 0.6)
-                            .offset(y: -(screen.height * 0.34))
+                            .offset(y: -(screen.height * 0.2))
 
                         VStack {
                             MovieTitle()
+                                .offset(y: -20)
+                            
+                            Spacer()
                             
                             MovieDetails(showDetail: $showDetail)
                                 .frame(width: screen.width)
@@ -40,9 +46,7 @@ struct HomeView: View {
                         }
                         .frame(width: screen.width)
                         .frame(minHeight: screen.height)
-                        .background(
-                            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)).opacity(0.03),Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.2),Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.2), Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.2)]), startPoint: .top, endPoint: .bottom)
-                        )
+                    
                         
                         
                     }
